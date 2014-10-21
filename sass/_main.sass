@@ -1,4 +1,373 @@
-// Normally mainpage styles
+// Normally mainpage stylesbo
+.out
+	width: 100%
+	min-height: 100%
+	min-width: 320px
+	margin: 0 auto
+	background-color: #f6f8f9
+	&_mod
+		background: white 
+.index
+	width: 100%
+	background: url(../img/birds.jpg) repeat-x top center #f6f8f9
+	+r(800)
+		background: url(../img/birds.jpg) repeat-x 5% 100% #f6f8f9
+		background-size: cover 
+.header
+	width: 100%
+	background: rgba(255, 255, 255, 0.5)
+	&__inner
+		width: 93.4%
+		padding: 27px 3.3% 27px
+		max-width: 980px
+		margin: 0 auto
+		+clr
+	i
+		+fs(25)
+		color: $text
+		float: right 
+		margin-right: 20px 
+		display: none
+		cursor: pointer
+		+r(600)
+			display: block
+.logo
+	float: left
+	+fs(34)
+	font-family: Helvetica, Arial, sans-serif 
+	border-bottom: 2px solid black
+	height: 33px
+	color: black
+	letter-spacing: 2px
+	line-height: 24px
+	position: relative
+	//background: url(../img/logo.png) no-repeat 40% 10%
+	&:visited
+		color: black 
+	&:hover
+		color: black
+		text-decoration: none 
+	img
+		display: none
+	+r(600)
+		margin-left: 20px 
+.nav
+	padding-right: 40px 
+	padding-top: 5px
+	text-align: right
+	&.is-open
+		display: block
+	+r(600)
+		text-align: center
+		padding: 10px 0 0 0
+		display: none
+		clear: both
+	li
+		display: inline-block
+		padding: 0px 22px 
+		position: relative
+		+r(600)
+			display: block
+			padding: 0
+		&.is-drop
+			.nav__drop
+				display: block
+	.nav__drop
+		display: none
+		position: absolute
+		padding-top: 11px
+		top: 100%
+		left: -80px
+		z-index: 9999
+		width: 230px
+		text-align: left
+		&.is-show
+			display: block
+		+r(600)
+			position: relative
+			top: auto
+			left: auto
+			width: 100%
+			text-align: center
+			padding-bottom: 11px
+		ul
+			background: #f6f8f9
+			overflow: hidden
+			border-radius: 2px
+			box-shadow: 0 0 5px rgba(51,51,51,.75)
+			+r(600)
+				box-shadow: none 
+				background: none
+		li
+			margin: 0px
+			padding: 0
+			display: block
+			a
+				padding: 13px 20px
+				width: 190px
+				+fs(14)
+				+ttu
+				letter-spacing: 0.5px
+				color: #333333
+				border-top: 1px solid #bcc5c3
+				display: block
+				+r(600)
+					width: auto
+					border-top: none
+					display: inline-block
+					padding: 0
+					text-transform: none
+				&:hover
+					color: $orange
+					background: white
+					+r(600)
+						color: $orange
+						background: none
+				&:active
+					color: $orange
+				&.is-first
+					border: none
+		i
+			display: block
+			position: absolute
+			top: 0px
+			left: 50%
+			margin-left: -10px
+			z-index: 9
+			+s(drop-arrow)
+			+r(600)
+				display: none
+	
+	a
+		+ub
+		+fs(14)
+		letter-spacing: 0.5px
+		+ttu
+		color: $text
+		&:hover
+			color: $orange
+			text-decoration: none
+	.is-active
+		color: $orange
+	.is-act
+		color: $orange
+		
+.heading
+	width: 100%
+	&_mod
+		min-height: 380px
+		.heading__inner
+			padding: 80px 3.3% 90px
+			height: 210px
+			.head, h6
+				color: #ffffff
+			.head
+				margin-bottom: 15px
+				display: block
+	&_press
+		background: url(../img/press.jpg) repeat-x center top 
+	&_blogs
+		background: url(../img/blogs.jpg) repeat-x 50% 80%	
+	&_words
+		background: url(../img/words.jpg) repeat-x 50% 14%		
+	&__filter
+		background: url(../img/filter.png) 
+		width: 100%
+	&__inner
+		width: 93.4%
+		padding: 80px 3.3% 50px 
+		max-width: 980px 
+		margin: 0 auto
+		position: relative
+		text-align: center
+		.head, h6
+			max-width: 640px
+			text-align: center
+			margin: 0 auto
+			+r(600)
+				max-width: 520px
+		.head
+			margin-bottom: 5px
+			display: block
+		h6
+			margin-bottom: 20px
+			+r(800)
+				br
+					display: none
+	&__line
+		width: 148px
+		height: 6px
+		background: #ffffff 
+		position: absolute
+		bottom: 90px
+		left: 50%
+		margin-left: -74px
+		display: inline-block
+	&__line_con
+		background: #333333
+		position: static
+		top: auto
+		left: auto
+		margin: 4px auto 0
+	&__row
+		text-align: justify
+		+fs(0.1)
+		word-spacing: 0px
+		padding-top: 40px
+		width: 100%
+		&:after
+			content: ""
+			width: 100%
+			display: inline-block 
+	&__box
+		width: 49%
+		padding: 45px 0 70px
+		max-width: 480px
+		display: inline-block
+		text-align: center
+		background: rgba(0, 0, 0, 0.6)
+		margin: 0 0 20px 0
+		+r(800)
+			width: 100%
+			display: block
+			margin: 0 auto 20px
+		h2, h6
+			color: $lighter
+		h2
+			margin-bottom: 30px
+			+r(480)
+				width: 85%
+				margin: 0 auto 30px
+				
+		h6
+			max-width: 190px
+			margin: 0 auto 30px
+		span
+			display: block
+			margin: 0 auto 15px
+			width: 180px
+			height: 180px
+			border-radius: 50%
+			position: relative
+			+vertical
+			i
+				display: inline-block
+				vertical-align: middle
+			&.is-grey
+				background: rgba(158, 187, 204, 0.75) 
+				i
+					+s(bloggers-icon)
+			&.is-orange
+				background: rgba(254, 160, 30, 0.75)
+				i
+					+s(advertisers-icon)
+
+.main
+	width: 100%
+	&__inner
+		width: 93.4%
+		padding: 0 3.3% 
+		max-width: 980px
+		margin: 0 auto
+	&__index
+		padding: 50px 0 70px
+		text-align: center
+		h1
+			margin-bottom: 30px
+		p
+			max-width: 600px
+			+fs(18)
+			margin: 0 auto 80px
+			+r(600)
+				+fs(16)
+				max-width: 520px
+			br
+				+r(600)
+					display: none
+.footer
+	width: 100%
+	background: $dark
+	margin: 0 auto 
+	&__inner
+		max-width: 1050px
+		margin: 0 auto
+		width: 100%
+		padding: 75px 0 0px 0 
+	&__bottom
+		width: 93.4%
+		padding: 21px 3.3% 28px 
+		+clr
+.menu
+	width: 93.4%
+	padding: 0 3.3% 95px 
+	+clr
+	border-bottom: 1px solid $grey
+	+r(800)
+		padding-bottom: 55px 
+		text-align: center
+	+r(480)
+		padding-bottom: 35px
+	&__list
+		width: 25%
+		float: left
+		+r(800)
+			width: 49%
+			float: none
+			display: inline-block
+			vertical-align: top
+			margin-bottom: 40px
+		+r(480)
+			width: 100%
+			display: block
+			margin-bottom: 30px
+	li
+		+ub
+		+fs(14)
+		color: $grey
+		letter-spacing: 0.5px
+		+ttu
+	&__heading
+		padding-bottom: 15px
+	a
+		+ul
+		+fs(16)
+		letter-spacing: 0.1px
+		line-height: 36px
+		color: $grey
+		text-transform: none
+		&:hover
+			text-decoration: underline
+.copy
+	+ur
+	+fs(12)
+	letter-spacing: 0.25px
+	color: $grey
+	+ttu
+	display: inline-block
+	padding: 15px 0 0 0
+	+r(600)
+		text-align: center
+		padding: 15px 0 30px 0 
+		display: block
+.social
+	float: right
+	padding-right: 20px
+	+r(600)
+		float: none
+		text-align: center
+	a
+		vertical-align: top
+		display: inline-block
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		margin: 0 10px 
+	.facebook
+		+s(facebook)
+	.twitter
+		+s(twitter)
+	.google
+		+s(google)
 
 
 
@@ -12,21 +381,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//whats0n
 
 
 
